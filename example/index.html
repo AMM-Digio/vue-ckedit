@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8">
+  <title>Vue CKEditor Component</title>
+  <meta name="viewport" content="initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width">
+  <meta name="keywords" content="vue,vuejs,vue component,vue,ui,javascript">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="../dist/vue-ckeditor.css">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body>
+<div class="page-wrapper">
+  <div class="container">
+    <nav class="left-col">
+      <ul class="page-nav">
+        <li class="page-nav__item">
+          <a class="page-nav__link" href="#examples">Example</a>
+        </li>
+      </ul>
+    </nav>
+    <div class="right-col">
+      <div class="page-content">
+        <header class="page-header">
+          <h1 class="page-header__title">Vue CKEditor Component</h1>
+          <p class="page-header__subtitle">CKEditor Template.</p>
+        </header>
+        <div class="page-body">
+          <section id="examples" class="section-examples">
+            <h2>Example</h2>
+            <div id="example">
+              <div id="demo">
+                <vue-ckeditor id="area1" v-model="content" :height="'300px'" :toolbar="[['Format'],['Cut', 'Copy', 'Paste', 'PasteText', 'PasteFromWord','Source'],'/',['Bold', 'Italic', 'Strike', '-', 'RemoveFormat'],['NumberedList', 'BulletedList', '-', 'Outdent', 'Indent', '-', 'Blockquote']]"></vue-ckeditor>
+                <p>Other editor</p>
+                <vue-ckeditor id="area2" v-model="content2" :height="'300px'"></vue-ckeditor>
+                <p>&nbsp;</p>
+                <a href="#" onclick="document.getElementById('hidden').style.display='block';">Click to show a hidden editor</a>
+                <div id="hidden" class="hidden">
+                  <vue-ckeditor id="area3" v-model="content3" :height="'300px'"></vue-ckeditor>
+                </div>
+              </div>
+            </div>
+          </section>
+
+     
+        </div>
+      </div>
+    </div>
+    <footer class="page-footer">
+      <span class="page-footer__copyright--small">Copyright </span>
+      <span class="page-footer__copyright--large">&copy; </span>
+      <a target="_blank" href="http://www.digio.es" target="_blank">DIGIO</a> 2017
+    </footer>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.1.9/vue.min.js"></script>
+<script>
+  CKEDITOR_BASEPATH = '../dist/assets/ckeditor/';
+</script>
+<script type="text/javascript" src="../dist/assets/ckeditor/ckeditor.js"></script>
+<script src="../dist/vue-ckeditor.js"></script>
+<script src="index.js"></script>
+</body>
